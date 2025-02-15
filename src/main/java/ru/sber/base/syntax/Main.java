@@ -1,4 +1,4 @@
-package com.ryuukun;
+package ru.sber.base.syntax;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,11 +10,10 @@ public class Main {
      * @see <a href="https://www.kgeorgiy.info/courses/prog-intro/homeworks.html">Job Condition (job 2)</a>
      * */
     public static long calculate(String... args) {
-        long result = 0;
+        long result = 0, sign = 1;
         for (var arg : args) {
             arg += " ";
 
-            long sign = 1;
             StringBuilder value = new StringBuilder();
             for (int i = 0; i < arg.length(); ++i) {
                 if (arg.charAt(i) == '-') {
@@ -25,6 +24,7 @@ public class Main {
                     if (!value.isEmpty()) {
                         result += Integer.parseInt(value.toString()) * sign;
                         value.setLength(0);
+                        sign = 1;
                     }
                 }
             }
