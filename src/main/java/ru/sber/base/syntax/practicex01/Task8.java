@@ -1,4 +1,4 @@
-package ru.sber.base.syntax.practice_01;
+package ru.sber.base.syntax.practicex01;
 
 import java.util.Arrays;
 
