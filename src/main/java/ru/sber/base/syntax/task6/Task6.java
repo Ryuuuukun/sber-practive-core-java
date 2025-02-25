@@ -1,4 +1,4 @@
-package ru.sber.base.syntax.practicex01;
+package ru.sber.base.syntax.task6;
 
 import java.util.ArrayList;
 

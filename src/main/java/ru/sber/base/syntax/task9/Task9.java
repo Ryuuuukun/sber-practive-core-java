@@ -1,4 +1,4 @@
-package ru.sber.base.syntax.practicex01;
+package ru.sber.base.syntax.task9;
 
 import java.util.Random;
 import java.util.Scanner;

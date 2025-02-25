@@ -1,4 +1,4 @@
-package ru.sber.base.syntax.practice_01;
+package ru.sber.base.syntax.task2;
 
 import java.util.Scanner;
 
