@@ -35,6 +35,6 @@ public class CalculatorJUnitTest {
 
     @Test
     public void bracketsTest() {
-        Assert.assertEquals(0, Calculator.evaluate("((((((((((((((0))))))))))))))"), 1e-10);
+        Assert.assertEquals(0, Calculator.evaluate("((((((((((((((0.0e-4))))))))))))))"), 1e-10);
     }
 }

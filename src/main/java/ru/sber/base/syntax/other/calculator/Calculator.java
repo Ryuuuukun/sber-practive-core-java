@@ -1,14 +1,22 @@
 package ru.sber.base.syntax.other.calculator;
 
-import ru.sber.base.syntax.other.calculator.parser.ArithmeticParser;
+import org.jetbrains.annotations.NotNull;
+import ru.sber.base.syntax.other.calculator.translator.ExpressionAssemblyParser;
 
-public class Calculator {
-    public static double evaluate(final String expression) {
-        return ArithmeticParser.parse(expression)
-                .evaluate();
+import java.util.Map;
+
+public final class Calculator {
+    public static double evaluate(@NotNull final String expression, Map<String, Object> args) {
+        return ExpressionAssemblyParser.parse(expression)
+                .evaluate(args);
     }
 
-    public static String canonical(final String expression) {
-        return ArithmeticParser.parse(expression).toString();
+    public static double evaluate(@NotNull final String expression) {
+        return ExpressionAssemblyParser.parse(expression)
+                .evaluate(Map.of());
+    }
+
+    public static String canonical(@NotNull final String expression) {
+        return ExpressionAssemblyParser.parse(expression).toString();
     }
 }

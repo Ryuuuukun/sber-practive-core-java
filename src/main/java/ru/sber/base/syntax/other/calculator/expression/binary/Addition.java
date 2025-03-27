@@ -2,13 +2,13 @@ package ru.sber.base.syntax.other.calculator.expression.binary;
 
 import ru.sber.base.syntax.other.calculator.expression.Expression;
 
-public class Divide extends BinaryExpression {
-    public Divide(Expression left, Expression right) {
-        super(left, right, "/");
+public class Addition extends BinaryExpression {
+    public Addition(Expression left, Expression right) {
+        super(left, right, "+");
     }
 
     @Override
     protected double operator(double a, double b) {
-        return a / b;
+        return a + b;
     }
 }
